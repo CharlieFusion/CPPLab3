@@ -23,7 +23,7 @@ int main ()
     }
 /* Создание множества параллельных процессов и в каждом из них задаются
 * свои приватные переменные rank и i*/
-#pragma omp parallel shared(A,b,c,total) private(rank,i)
+#pragma omp parallel shared(A,b,c) private(rank,i)
     {
         rank = omp_get_thread_num();
 /* Директива распараллеливания цикла по виткам */
